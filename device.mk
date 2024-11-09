@@ -442,6 +442,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
+# Platform
+MSMSTEPPE := holi
+TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
+
+TARGET_COMMON_QTI_COMPONENTS := \
+    adreno \
+    perf
+
 # Lineage Health
 ifneq ($(wildcard hardware/*/interfaces/health),)
 PRODUCT_PACKAGES += \
